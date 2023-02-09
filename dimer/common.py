@@ -343,7 +343,7 @@ def repair_tail(Sigma, moments):
                 for i in range(len(iwn)-replace): Sigma_repair[name].data[i,orb1,orb2] = Sigma_asymp[i]
     return Sigma_repair
 
-ar = HDFArchive('../cthyb-pm.h5')
+ar = HDFArchive('cthyb-pm.h5')
 dm = ar['dm']
 hdiag = ar['h_loc_diag']
 G_iw_data = ar['G']
