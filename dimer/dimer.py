@@ -100,7 +100,7 @@ for bl, iw in product(block_names, iw_mesh):
 #    G0_iw_data[bl][iw] = inv(iw.value * eye(2*n_orb) - h_tot_mat)[:n_orb, :n_orb]
 
 #ar = HDFArchive('../res_pyed_b5.h5')
-ar = HDFArchive('pyed.h5')
+ar = HDFArchive('../pyed.h5')
 G_iw_ref = ar['G']
 del ar
 

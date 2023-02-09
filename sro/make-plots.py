@@ -66,7 +66,7 @@ def max_G_diff(G1, G2, norm_temp = True):
     return norm
 
 def plot_self_energies(data):
-	fig,ax = plt.subplots(len(data)+1, 3,figsize=(12,9))
+	fig,ax = plt.subplots(len(data), 3,figsize=(12,9))
 	plt.subplots_adjust(hspace=0.5)
 	for ikey, key in enumerate(data.keys()):
 		S_iw = data[key]['dmft_results/last_iter']['Sigma_iw']
@@ -86,5 +86,7 @@ def plot_self_energies(data):
 
 if __name__ == "__main__":
 
-    dlr_data = { 40: HDFArchive('sro_dmft_dlr_40.h5')}
+    dlr_data = { 50: HDFArchive('sro_dmft_dlr_50_1e-10.h5'), 
+                 60: HDFArchive('sro_dmft_dlr_60_1e-09.h5')
+               }
     plot_self_energies(dlr_data)
