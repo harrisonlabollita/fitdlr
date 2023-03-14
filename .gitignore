@@ -1,0 +1,4 @@
+*.h5*
+*.ipynb_checkpoints*
+*__pycache__*
+*sro_dyson_solve*
