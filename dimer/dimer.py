@@ -103,6 +103,6 @@ for bl, iw in product(block_names, iw_mesh):
 ar = HDFArchive('pyed.h5')
 G_iw_ref = ar['G']
 del ar
-
+G0_tau_ref = make_gf_from_fourier(G0_iw)
 G_tau_ref = make_gf_from_fourier(G_iw_ref)
 Sigma_iw_ref = inverse(G0_iw) - inverse(G_iw_ref)
